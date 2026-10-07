@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Bus Tracker</title>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <!-- Google Fonts for modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="ui-container">
+        <h1>Bus Tracker Made by Girish..!</h1>
+        <div id="role-selection">
+            <p>Select your role below:</p>
+            <button id="btn-bus">I am the Bus</button>
+            <button id="btn-passenger">I am a Passenger</button>
+        </div>
+        <div id="pin-section" class="hidden">
+            <p>Enter Bus Driver PIN:</p>
+            <input type="password" id="pin-input" placeholder="Enter PIN">
+            <button id="btn-submit-pin">Submit</button>
+            <button id="btn-cancel-pin" class="btn-cancel">Cancel</button>
+        </div>
+        <div id="status"></div>
+    </div>
+
+    <button id="btn-recenter" class="hidden">📍 Find Bus</button>
+
+    <div id="map"></div>
+
+    <!-- Socket.io and Leaflet JS -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
